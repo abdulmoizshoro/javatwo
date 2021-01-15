@@ -42,7 +42,21 @@ if(userName.charAt(i) === "!" ||userName.charAt(i) === "@" ){
 }
 
       //.....03.....//
-
+      function count(i, j) 
+      {
+      i += '';
+      j += '';
+  
+      if (j.length <= 0) 
+      {
+          return i.length + 1;
+      }
+    subStr = j.replace('&', '\\');
+         return (i.match(new RegExp(subStr, 'gi')) || []).length;
+       
+      }
+   
+  console.log(count("The quick brown fox jumps over the lazy dog", 'the'));
 
 
 //...Strings: finding a character at a location....//
@@ -58,7 +72,7 @@ intoArray.splice(0,5,"Islam")
 document.write(intoArray.splice(0,5,"Islam")+word2.slice(5))
 
       //.....02.....//
-var message = "Ali and Sami are best friends. They plau\y cricket and football together."
+var message = "Ali and Sami are best friends. They play cricket and football together."
 var changedMessage = message.replace(/and/g,"&")
 document.write(changedMessage)
 
