@@ -42,22 +42,9 @@ if(userName.charAt(i) === "!" ||userName.charAt(i) === "@" ){
 }
 
       //.....03.....//
-      function count(i, j) 
-      {
-      i += '';
-      j += '';
-  
-      if (j.length <= 0) 
-      {
-          return i.length + 1;
-      }
-    subStr = j.replace('&', '\\');
-         return (i.match(new RegExp(subStr, 'gi')) || []).length;
-       
-      }
-   
-  console.log(count("The quick brown fox jumps over the lazy dog", 'the'));
-
+var word="The quick brown fox jumps over the lazy dog";
+var findIndex=word.indexOf("the");
+document.write("Number of Occurence word 'the': "+findIndex);
 
 //...Strings: finding a character at a location....//
       //.....01.....//
